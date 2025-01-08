@@ -62,7 +62,7 @@ void loop() {
         Serial.println("Publishing temperature and humidity...");
 
         String tempPayload = "Temperature: " + String(temperature) + "°C";
-        bool tempResult = mqtt.publish("blcap-sep400/device/temperature", tempPayload.c_str());
+        bool tempResult = mqtt.publish("blcap-sep400/device", tempPayload.c_str());
         if (tempResult) {
             Serial.println("Temperature published successfully!");
         } else {
